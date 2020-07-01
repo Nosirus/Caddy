@@ -10,7 +10,9 @@ FROM --platform=linux/arm64/v8 caddy:builder AS builder2
 COPY --from=builder1 qemu-aarch64-static /usr/bin
 
 RUN caddy-builder \
-    github.com/caddy-dns/cloudflare
+    github.com/caddy-dns/cloudflare \
+    github.com/mholt/caddy-webdav \
+    github.com/sjtug/caddy2-filter
 
 FROM --platform=linux/arm64/v8 caddy:alpine
 
