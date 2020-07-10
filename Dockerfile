@@ -9,11 +9,11 @@ RUN curl \
         --output xcaddy \
  && chmod +x xcaddy
 RUN ./xcaddy build v${VERSION_CADDY} \
-        --output /usr/local/bin/caddy \
+        --output /usr/bin/caddy \
         --with github.com/caddy-dns/cloudflare \
         --with github.com/mholt/caddy-webdav \
         --with github.com/sjtug/caddy2-filter
 
 FROM caddy:2.1.1
 
-COPY --from=builder /usr/local/bin/caddy /usr/bin/caddy
+COPY --from=builder /usr/bin/caddy /usr/bin/caddy
