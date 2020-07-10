@@ -1,10 +1,3 @@
-FROM caddy:2.1.1-builder AS builder
-
-RUN caddy-builder \
-    github.com/caddy-dns/cloudflare \
-    github.com/mholt/caddy-webdav \
-    github.com/sjtug/caddy2-filter
-
 FROM golang:buster AS builder
 ENV VERSION_CADDY=2.1.1 \
     VERSION_XCADDY=0.1.4
