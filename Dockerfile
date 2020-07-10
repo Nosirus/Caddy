@@ -16,4 +16,4 @@ RUN ./xcaddy build v${VERSION_CADDY} \
 
 FROM caddy:2.1.1
 
-COPY --from=builder /usr/bin/caddy /usr/bin/caddy
+COPY --from=builder /usr/local/bin/caddy /usr/bin/caddy
