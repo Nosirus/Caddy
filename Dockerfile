@@ -13,7 +13,8 @@ RUN ./xcaddy build v${VERSION_CADDY} \
         --with github.com/caddy-dns/cloudflare \
         --with github.com/mholt/caddy-webdav \
         --with github.com/sjtug/caddy2-filter \
-        --with github.com/vrongmeal/caddygit
+        --with github.com/vrongmeal/caddygit \
+        --with github.com/greenpau/caddy-auth-jwt
 
 FROM caddy:2.1.1
 
