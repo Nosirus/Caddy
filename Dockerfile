@@ -10,11 +10,9 @@ RUN curl \
  && chmod +x xcaddy
 RUN ./xcaddy build v${VERSION_CADDY} \
         --output /usr/bin/caddy \
-        --with github.com/caddy-dns/cloudflare \
         --with github.com/mholt/caddy-webdav \
         --with github.com/sjtug/caddy2-filter \
         --with github.com/vrongmeal/caddygit \
-        --with github.com/greenpau/caddy-auth-jwt
 
 FROM caddy:2.1.1
 
