@@ -1,6 +1,6 @@
 FROM golang:buster AS builder
 ENV VERSION_CADDY=2.2.1 \
-    VERSION_XCADDY=0.1.4
+    VERSION_XCADDY=0.1.5
 RUN curl \
         --fail \
         --location \
