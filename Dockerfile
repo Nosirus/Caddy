@@ -1,5 +1,5 @@
 FROM golang:buster AS builder
-ENV VERSION_CADDY=2.1.1 \
+ENV VERSION_CADDY=2.2.1 \
     VERSION_XCADDY=0.1.4
 RUN curl \
         --fail \
@@ -12,6 +12,6 @@ RUN ./xcaddy build v${VERSION_CADDY} \
         --output /usr/bin/caddy \
         --with github.com/sjtug/caddy2-filter \
 
-FROM caddy:2.1.1
+FROM caddy:2.2.1
 
 COPY --from=builder /usr/bin/caddy /usr/bin/caddy
